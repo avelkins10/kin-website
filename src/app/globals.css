@@ -1,4 +1,38 @@
-/* Reset — let Webflow CSS handle everything */
-*, *::before, *::after {
-  box-sizing: border-box;
+@import "tailwindcss";
+
+@theme {
+  /* KIN Brand — warm, premium, trustworthy */
+  --color-kin-cream: #ece6e4;
+  --color-kin-ivory: #f7f3f1;
+  --color-kin-warm-white: #faf8f6;
+  --color-kin-charcoal: #1a1b1f;
+  --color-kin-charcoal-light: #2d2e33;
+  --color-kin-sage: #8c968d;
+  --color-kin-sage-light: #a8b0a9;
+  --color-kin-blue: #0050bd;
+  --color-kin-blue-light: #0066e6;
+  --color-kin-orange: #f97316;
+  --color-kin-orange-light: #fb923c;
+  --font-sans: 'Poppins', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #faf8f6;
+  color: #1a1b1f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth reveal */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
 }
