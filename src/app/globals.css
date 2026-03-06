@@ -1,4 +1,47 @@
-/* Reset — let Webflow CSS handle everything */
-*, *::before, *::after {
-  box-sizing: border-box;
+@import "tailwindcss";
+
+@theme {
+  --color-kin-orange: #f97316;
+  --color-kin-orange-light: #fb923c;
+  --color-kin-orange-dark: #ea580c;
+  --color-kin-dark: #0a0a0a;
+  --color-kin-dark-2: #111111;
+  --color-kin-dark-3: #1a1a1a;
+  --color-kin-cream: #ece6e4;
+  --color-kin-sage: #8c968d;
+  --color-kin-blue: #0050bd;
+  --font-sans: 'Poppins', system-ui, sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0a0a;
+  color: #fafafa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scroll reveal animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Stagger children */
+.stagger > * {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+.stagger > *:nth-child(1) { animation-delay: 0ms; }
+.stagger > *:nth-child(2) { animation-delay: 100ms; }
+.stagger > *:nth-child(3) { animation-delay: 200ms; }
+.stagger > *:nth-child(4) { animation-delay: 300ms; }
+.stagger > *:nth-child(5) { animation-delay: 400ms; }
+.stagger > *:nth-child(6) { animation-delay: 500ms; }
