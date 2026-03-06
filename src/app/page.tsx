@@ -3,6 +3,7 @@ import Footer from '@/components/footer'
 import SavingsCalculator from '@/components/savings-calculator'
 import Link from 'next/link'
 import { Star, Shield, MapPin, ArrowRight, CheckCircle, Sun, Home, Wind } from 'lucide-react'
+import { organizationSchema } from '@/lib/schema'
 
 /* ── Trust stats ─── */
 const stats = [
@@ -60,6 +61,9 @@ const whyKin = [
 export default function HomePage() {
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
+
       <Header />
 
       {/* ════ HERO ════ */}
