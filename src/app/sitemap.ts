@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next'
 // Florida cities (priority 1)
 const flCities = ['pensacola', 'fort-myers', 'tampa', 'orlando', 'jacksonville', 'sarasota']
 // California cities (priority 2)
-const caCities = ['bay-area', 'central-coast']
+const caCities = ['san-jose', 'fremont', 'san-francisco', 'sacramento']
 // Other states/cities added later
 
 export default function sitemap(): MetadataRoute.Sitemap {

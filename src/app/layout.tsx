@@ -2,13 +2,14 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'KIN Home — Solar, Roofing & HVAC | 4,000+ Installs Across 10 States',
-  description: 'KIN Home is a residential solar, roofing, and HVAC company focused on an unmatched customer experience. 882+ five-star reviews. Get a free instant estimate.',
+  title: 'Solar, HVAC & Roofing Installation | KIN Home',
+  description: 'KIN Home installs solar panels, HVAC systems, and roofing for homeowners in FL, CA, and 8 other states. 882 reviews. Get a free estimate today.',
   openGraph: {
-    title: 'KIN Home — Solar, Roofing & HVAC',
-    description: '4,000+ installs. 882+ five-star reviews. 10 states. Get your free instant estimate.',
+    title: 'KIN Home — Solar, HVAC & Roofing for Your Home',
+    description: '882 five-star Google reviews. In-house crews. $0 down financing. Get a free estimate from KIN Home.',
     type: 'website',
   },
+  twitter: { card: 'summary_large_image' },
   icons: {
     icon: '/img/Logo---Icon---Black-2.png',
     apple: '/img/KinHome_WebIcons-2.png',
