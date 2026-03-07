@@ -49,9 +49,9 @@ export default async function CityPage({ params }: Props) {
       <Header />
 
       {/* Breadcrumbs */}
-      <div className="bg-kin-ivory border-b border-kin-cream pt-20">
+      <div className="bg-kin-light-gray border-b border-kin-beige pt-20">
         <div className="max-w-7xl mx-auto px-6 py-3">
-          <nav className="flex items-center gap-2 text-xs text-kin-charcoal/40">
+          <nav className="flex items-center gap-2 text-xs text-kin-text-secondary">
             <Link href="/" className="hover:text-kin-charcoal transition-colors">Home</Link>
             <span>/</span>
             <Link href="/solar" className="hover:text-kin-charcoal transition-colors">Solar</Link>
@@ -64,7 +64,7 @@ export default async function CityPage({ params }: Props) {
       </div>
 
       {/* ════ HERO ════ */}
-      <section className="bg-kin-ivory">
+      <section className="bg-kin-light-gray">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div>
             <div className="inline-flex items-center gap-2 bg-kin-sage/10 text-kin-sage text-sm font-medium px-4 py-1.5 rounded-full mb-6">
@@ -76,28 +76,28 @@ export default async function CityPage({ params }: Props) {
               Solar Installation<br />in {city}, {stateCode}
             </h1>
 
-            <p className="text-lg text-kin-charcoal/60 mb-6 leading-relaxed">
+            <p className="text-lg text-kin-text-secondary mb-6 leading-relaxed">
               Go solar with KIN Home — your local {city} installer. We handle design, permits, installation, and monitoring.
               {city} averages {sunHours} peak sun hours per day — excellent for solar.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 text-sm text-kin-charcoal/40 mb-8">
+            <div className="flex flex-wrap items-center gap-4 text-sm text-kin-text-secondary mb-8">
               <span className="flex items-center gap-1.5">
-                <Star size={14} className="text-yellow-500 fill-yellow-500" />
+                <Star size={14} className="text-kin-gold fill-kin-gold" />
                 4.4★ · 882+ reviews
               </span>
               <span className="flex items-center gap-1.5">
-                <Shield size={14} className="text-kin-blue" />
+                <Shield size={14} className="text-kin-gray-blue" />
                 BBB A+
               </span>
               <span className="flex items-center gap-1.5">
-                <Zap size={14} className="text-kin-orange" />
+                <Zap size={14} className="text-kin-sage" />
                 ${avgSavings}/mo avg savings
               </span>
             </div>
 
             <Link href="/get-an-instant-estimate"
-              className="inline-flex items-center gap-2 bg-kin-orange hover:bg-kin-orange-light text-white font-semibold px-8 py-4 rounded-full transition-all hover:shadow-lg hover:shadow-orange-200/50">
+              className="inline-flex items-center gap-2 bg-kin-sage hover:bg-kin-sage-light text-white font-semibold px-8 py-4 rounded-full transition-all hover:shadow-lg hover:shadow-kin-sage/20">
               Get Your Free {city} Estimate <ArrowRight size={16} />
             </Link>
           </div>
@@ -109,42 +109,42 @@ export default async function CityPage({ params }: Props) {
       </section>
 
       {/* ════ LOCAL STATS ════ */}
-      <section className="bg-white border-y border-kin-cream">
+      <section className="bg-white border-y border-kin-beige">
         <div className="max-w-7xl mx-auto px-6 py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-2xl md:text-3xl font-bold text-kin-charcoal">{sunHours}h</div>
-              <div className="text-xs text-kin-charcoal/40 mt-0.5">Avg Daily Sun Hours</div>
+              <div className="text-xs text-kin-text-secondary mt-0.5">Avg Daily Sun Hours</div>
             </div>
             <div>
               <div className="text-2xl md:text-3xl font-bold text-kin-charcoal">${avgSavings}</div>
-              <div className="text-xs text-kin-charcoal/40 mt-0.5">Avg Monthly Savings</div>
+              <div className="text-xs text-kin-text-secondary mt-0.5">Avg Monthly Savings</div>
             </div>
             <div>
               <div className="text-2xl md:text-3xl font-bold text-kin-charcoal">${avgBill}</div>
-              <div className="text-xs text-kin-charcoal/40 mt-0.5">Avg Electric Bill</div>
+              <div className="text-xs text-kin-text-secondary mt-0.5">Avg Electric Bill</div>
             </div>
             <div>
               <div className="text-2xl md:text-3xl font-bold text-kin-charcoal">30%</div>
-              <div className="text-xs text-kin-charcoal/40 mt-0.5">Federal Tax Credit</div>
+              <div className="text-xs text-kin-text-secondary mt-0.5">Federal Tax Credit</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ════ UTILITY & INCENTIVES ════ */}
-      <section className="py-16 md:py-24 bg-kin-warm-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">Your Local Utility</p>
               <h2 className="text-2xl md:text-3xl font-bold text-kin-charcoal mb-4">{utility}</h2>
-              <p className="text-kin-charcoal/50 leading-relaxed mb-6">
+              <p className="text-kin-text-secondary leading-relaxed mb-6">
                 {city} homeowners served by {utility} can take advantage of net metering to earn credits for excess solar energy.
                 Your KIN consultant will optimize your system for {utility}&apos;s specific rate structure.
               </p>
-              <p className="text-sm text-kin-charcoal/40">
-                <strong className="text-kin-charcoal/60">Permitting:</strong> {permits}
+              <p className="text-sm text-kin-text-secondary">
+                <strong className="text-kin-text-secondary">Permitting:</strong> {permits}
               </p>
             </div>
             <div>
@@ -153,7 +153,7 @@ export default async function CityPage({ params }: Props) {
                 {incentives.map((inc, i) => (
                   <div key={i} className="flex gap-3 items-start">
                     <CheckCircle size={16} className="text-kin-sage mt-0.5 flex-shrink-0" />
-                    <p className="text-sm text-kin-charcoal/60 leading-relaxed">{inc}</p>
+                    <p className="text-sm text-kin-text-secondary leading-relaxed">{inc}</p>
                   </div>
                 ))}
               </div>
@@ -177,10 +177,10 @@ export default async function CityPage({ params }: Props) {
               { n: '2', t: 'Design & Permitting', d: `We handle engineering, ${stateCode === 'FL' ? 'Florida Building Code' : 'local'} permits, and ${utility} paperwork. You don't touch a thing.` },
               { n: '3', t: 'Install & Power On', d: `Our certified crew installs your system — usually in one day. We activate it with ${utility} and walk you through the monitoring app.` },
             ].map(s => (
-              <div key={s.n} className="bg-kin-ivory rounded-2xl border border-kin-cream p-8">
-                <div className="w-10 h-10 rounded-full bg-kin-orange/10 flex items-center justify-center text-kin-orange font-bold mb-4">{s.n}</div>
+              <div key={s.n} className="bg-kin-light-gray rounded-2xl border border-kin-beige p-8">
+                <div className="w-10 h-10 rounded-full bg-kin-sage/10 flex items-center justify-center text-kin-sage font-bold mb-4">{s.n}</div>
                 <h3 className="text-lg font-semibold text-kin-charcoal mb-2">{s.t}</h3>
-                <p className="text-sm text-kin-charcoal/50 leading-relaxed">{s.d}</p>
+                <p className="text-sm text-kin-text-secondary leading-relaxed">{s.d}</p>
               </div>
             ))}
           </div>
@@ -188,7 +188,7 @@ export default async function CityPage({ params }: Props) {
       </section>
 
       {/* ════ FAQ ════ */}
-      <section className="py-16 md:py-24 bg-kin-warm-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-12">
             <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">FAQ</p>
@@ -198,12 +198,12 @@ export default async function CityPage({ params }: Props) {
           </div>
           <div className="space-y-4">
             {faqs.map((faq, i) => (
-              <details key={i} className="group bg-white rounded-2xl border border-kin-cream overflow-hidden">
-                <summary className="flex items-center justify-between cursor-pointer px-6 py-5 text-sm font-medium text-kin-charcoal hover:bg-kin-ivory/50 transition-colors list-none">
+              <details key={i} className="group bg-white rounded-2xl border border-kin-beige overflow-hidden">
+                <summary className="flex items-center justify-between cursor-pointer px-6 py-5 text-sm font-medium text-kin-charcoal hover:bg-kin-light-gray/50 transition-colors list-none">
                   {faq.q}
-                  <ChevronDown size={16} className="text-kin-charcoal/30 group-open:rotate-180 transition-transform flex-shrink-0 ml-4" />
+                  <ChevronDown size={16} className="text-kin-text-secondary group-open:rotate-180 transition-transform flex-shrink-0 ml-4" />
                 </summary>
-                <div className="px-6 pb-5 text-sm text-kin-charcoal/60 leading-relaxed">
+                <div className="px-6 pb-5 text-sm text-kin-text-secondary leading-relaxed">
                   {faq.a}
                 </div>
               </details>
@@ -213,7 +213,7 @@ export default async function CityPage({ params }: Props) {
       </section>
 
       {/* ════ NEARBY CITIES ════ */}
-      <section className="py-12 bg-white border-t border-kin-cream">
+      <section className="py-12 bg-white border-t border-kin-beige">
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-4 text-center">Also Serving Nearby</p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -222,7 +222,7 @@ export default async function CityPage({ params }: Props) {
               if (!nearby) return null
               return (
                 <Link key={slug} href={`/solar/${nearby.stateSlug}/${slug}`}
-                  className="px-5 py-2.5 rounded-full text-sm font-medium bg-kin-ivory border border-kin-cream text-kin-charcoal/60 hover:border-kin-charcoal/20 hover:text-kin-charcoal transition-all">
+                  className="px-5 py-2.5 rounded-full text-sm font-medium bg-kin-light-gray border border-kin-beige text-kin-text-secondary hover:border-kin-charcoal/20 hover:text-kin-charcoal transition-all">
                   {nearby.city}, {nearby.stateCode} Solar
                 </Link>
               )
@@ -241,7 +241,7 @@ export default async function CityPage({ params }: Props) {
             Get a free, no-obligation estimate. See how much you could save with {utility} net metering and the 30% federal tax credit.
           </p>
           <Link href="/get-an-instant-estimate"
-            className="inline-flex items-center gap-2 bg-kin-orange hover:bg-kin-orange-light text-white font-semibold text-lg px-10 py-4 rounded-full transition-all hover:shadow-lg hover:shadow-orange-400/30">
+            className="inline-flex items-center gap-2 bg-kin-sage hover:bg-kin-sage-light text-white font-semibold text-lg px-10 py-4 rounded-full transition-all hover:shadow-lg hover:shadow-kin-sage/30">
             Get Your Free {city} Estimate <ArrowRight size={18} />
           </Link>
           <div className="flex flex-wrap items-center justify-center gap-6 mt-6 text-sm text-white/40">
@@ -255,9 +255,9 @@ export default async function CityPage({ params }: Props) {
       <Footer />
 
       {/* Mobile sticky CTA */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-t border-kin-cream px-4 py-3">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-t border-kin-beige px-4 py-3">
         <Link href="/get-an-instant-estimate"
-          className="block w-full text-center bg-kin-orange text-white font-semibold py-3.5 rounded-full">
+          className="block w-full text-center bg-kin-sage text-white font-semibold py-3.5 rounded-full">
           Get Free {city} Estimate
         </Link>
       </div>

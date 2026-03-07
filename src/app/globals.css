@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  /* KIN Brand — warm, premium, trustworthy */
-  --color-kin-cream: #ece6e4;
-  --color-kin-ivory: #f7f3f1;
-  --color-kin-warm-white: #faf8f6;
-  --color-kin-charcoal: #1a1b1f;
-  --color-kin-charcoal-light: #2d2e33;
+  /* KIN Brand — exact colors from kinhome.com */
+  --color-kin-white: #ffffff;
+  --color-kin-beige: #ece7e4;
+  --color-kin-tan: #cec4bc;
+  --color-kin-light-gray: #f7f7f7;
+  --color-kin-charcoal: #403e3b;
+  --color-kin-text: #1b1a1a;
+  --color-kin-text-secondary: #645c55;
   --color-kin-sage: #8c968d;
-  --color-kin-sage-light: #a8b0a9;
-  --color-kin-blue: #0050bd;
-  --color-kin-blue-light: #0066e6;
-  --color-kin-orange: #f97316;
-  --color-kin-orange-light: #fb923c;
+  --color-kin-sage-light: #a3aca4;
+  --color-kin-gold: #fec84b;
+  --color-kin-dark-blue: #101828;
+  --color-kin-gray-blue: #475467;
   --font-sans: 'Poppins', system-ui, sans-serif;
 }
 
@@ -21,13 +22,12 @@ html {
 }
 
 body {
-  background: #faf8f6;
-  color: #1a1b1f;
+  background: #ffffff;
+  color: #1b1a1a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth reveal */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }

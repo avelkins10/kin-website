@@ -32,7 +32,7 @@ export default function Footer() {
               Solar, roofing, and HVAC for homeowners who want it done right. Since 2020.
             </p>
             <div className="flex items-center gap-2 text-sm">
-              <span className="text-yellow-400">★</span>
+              <span className="text-kin-gold">★</span>
               <span className="text-white/70">4.4 · 882+ Google Reviews</span>
             </div>
           </div>
