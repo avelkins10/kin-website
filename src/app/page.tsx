@@ -4,6 +4,7 @@ import SavingsCalculator from '@/components/savings-calculator'
 import Link from 'next/link'
 import { Star, Shield, MapPin, ArrowRight, CheckCircle, Sun, Home, Wind } from 'lucide-react'
 import { organizationSchema } from '@/lib/schema'
+import { getHomepageTestimonials, getHeroTestimonial } from '@/lib/testimonials'
 
 const stats = [
   { value: '4,000+', label: 'Homes Powered' },
@@ -19,11 +20,8 @@ const services = [
   { icon: Wind, title: 'HVAC', desc: 'Our Comfort Plan pairs high-efficiency heating and cooling with solar for maximum energy savings.', href: '/hvac', img: '/img/646ba412d82177fca24f9e7f_DSC03962.jpg' },
 ]
 
-const reviews = [
-  { name: 'Bennett Luke', city: 'Florida', text: 'KIN Home made the entire process seamless. From the initial consultation to the final installation, every step was professional and timely. Highly recommend!' },
-  { name: 'Jorge Sevilla', city: 'California', text: 'Best decision we made for our home. The team was knowledgeable, responsive, and the install was done in a single day. Our electric bill is practically zero now.' },
-  { name: 'Brady Gurr', city: 'Texas', text: 'I was skeptical about solar but the KIN team walked me through everything. The ROI projections they showed me were accurate — we\'re saving more than expected.' },
-]
+const heroTestimonial = getHeroTestimonial()
+const homepageReviews = getHomepageTestimonials()
 
 const steps = [
   { num: '1', title: 'Free Consultation', desc: 'A KIN representative reviews your home and energy usage to design a custom system — in person or virtually. No pressure, no obligation.' },
@@ -165,37 +163,67 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ════ SOCIAL PROOF ════ */}
+      {/* ════ REAL RESULTS ════ */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-1 mb-3">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={20} className="text-kin-gold fill-kin-gold" />
-              ))}
+          {/* Hero stat */}
+          {heroTestimonial && (
+            <div className="text-center mb-16">
+              <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-4">Real Results</p>
+              <div className="flex items-center justify-center gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={20} className="text-kin-gold fill-kin-gold" />
+                ))}
+              </div>
+              <h2 className="text-3xl md:text-5xl font-bold text-kin-text mb-2">
+                <span className="text-kin-text-secondary line-through decoration-2">${heroTestimonial.savingsBefore}</span>
+                {' → '}
+                <span className="text-kin-sage">${heroTestimonial.savingsAfter}</span>
+                <span className="text-xl md:text-2xl text-kin-text-secondary font-normal">/mo</span>
+              </h2>
+              <p className="text-kin-text-secondary mt-2 max-w-lg mx-auto">
+                &ldquo;{heroTestimonial.quote}&rdquo;
+              </p>
+              <p className="text-sm text-kin-text-secondary/60 mt-2">— {heroTestimonial.name} · Verified Google Review</p>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-kin-text">Don&apos;t just take our word for it.</h2>
-            <p className="text-kin-text-secondary mt-3">882+ verified reviews from real homeowners. 4.4-star average on Google.</p>
-          </div>
+          )}
+
+          {/* Review cards */}
           <div className="grid md:grid-cols-3 gap-6">
-            {reviews.map(r => (
+            {homepageReviews.filter(r => !r.use.includes('hero')).slice(0, 6).map(r => (
               <div key={r.name} className="bg-kin-light-gray rounded-2xl border border-kin-beige p-6 hover:shadow-lg hover:shadow-black/3 transition-all">
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={14} className="text-kin-gold fill-kin-gold" />
-                  ))}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-1">
+                    {[...Array(r.stars)].map((_, i) => (
+                      <Star key={i} size={14} className="text-kin-gold fill-kin-gold" />
+                    ))}
+                  </div>
+                  {r.savingsText && (
+                    <span className="text-xs font-semibold text-kin-sage bg-kin-sage/10 px-2.5 py-1 rounded-full">
+                      {r.savingsText}
+                    </span>
+                  )}
+                  {!r.savingsText && r.systemKw && (
+                    <span className="text-xs font-medium text-kin-text-secondary bg-kin-beige px-2.5 py-1 rounded-full">
+                      {r.systemKw} kW system
+                    </span>
+                  )}
                 </div>
-                <p className="text-sm text-kin-text/70 leading-relaxed mb-5">&ldquo;{r.text}&rdquo;</p>
+                <p className="text-sm text-kin-text/70 leading-relaxed mb-5">&ldquo;{r.quote}&rdquo;</p>
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-full bg-kin-beige flex items-center justify-center text-sm font-semibold text-kin-text-secondary">{r.name[0]}</div>
                   <div>
                     <div className="text-sm font-medium text-kin-text">{r.name}</div>
-                    <div className="text-xs text-kin-text-secondary">{r.city} · Google Review</div>
+                    <div className="text-xs text-kin-text-secondary">
+                      {[r.city, r.state].filter(Boolean).join(', ') || 'KIN Customer'} · Google Review
+                      {r.verified === 'qb' && ' · ✓ Verified'}
+                    </div>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+
           <div className="text-center mt-10">
             <a href="https://www.google.com/search?q=kin+home+solar+reviews" target="_blank" rel="noopener noreferrer"
               className="text-kin-sage text-sm font-medium hover:underline inline-flex items-center gap-1">
