@@ -13,12 +13,12 @@ const activeStates = [
   {
     name: 'California', img: '/img/67fd9ee490e6931404c6652f_CA_3.png',
     cities: ['Bay Area', 'Riverside', 'San Diego', 'Sacramento', 'San Jose', 'Fremont'],
-    link: '/solar/california',
+    link: null,
   },
   {
     name: 'Florida', img: '/img/66b3c887cab2d69363534b3a_668229fc6079aea983ac27fe_Florida-p-500.png',
     cities: ['Pensacola', 'Fort Myers', 'Orlando', 'Tampa', 'Clearwater', 'Cape Coral', 'Jacksonville', 'Sarasota'],
-    link: '/solar/florida',
+    link: null,
   },
   {
     name: 'Texas', img: '/img/66b3c829729995cb2e5439a9_668229fda1151e4d50583cc0_Texas.png',
