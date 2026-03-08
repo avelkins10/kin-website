@@ -32,7 +32,7 @@ export default async function CityPage({ params }: Props) {
   const data = getCityData(citySlug)
   if (!data) notFound()
 
-  const { city, state, stateCode, utility, avgBill, sunHours, incentives, avgSavings, permits, nearbyAll, faqs } = data
+  const { city, state, stateCode, utility, avgBill, sunHours, incentives, avgSavings, permits, nearbyAll, faqs, utilityRateInfo } = data
 
   return (
     <>
@@ -111,7 +111,7 @@ export default async function CityPage({ params }: Props) {
       {/* ════ LOCAL STATS ════ */}
       <section className="bg-white border-y border-kin-beige">
         <div className="max-w-7xl mx-auto px-6 py-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-center">
             <div>
               <div className="text-2xl md:text-3xl font-bold text-kin-charcoal">{sunHours}h</div>
               <div className="text-xs text-kin-text-secondary mt-0.5">Avg Daily Sun Hours</div>
@@ -124,10 +124,6 @@ export default async function CityPage({ params }: Props) {
               <div className="text-2xl md:text-3xl font-bold text-kin-charcoal">${avgBill}</div>
               <div className="text-xs text-kin-text-secondary mt-0.5">Avg Electric Bill</div>
             </div>
-            <div>
-              <div className="text-2xl md:text-3xl font-bold text-kin-charcoal">30%</div>
-              <div className="text-xs text-kin-text-secondary mt-0.5">Federal Tax Credit</div>
-            </div>
           </div>
         </div>
       </section>
@@ -139,10 +135,16 @@ export default async function CityPage({ params }: Props) {
             <div>
               <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">Your Local Utility</p>
               <h2 className="text-2xl md:text-3xl font-bold text-kin-charcoal mb-4">{utility}</h2>
-              <p className="text-kin-text-secondary leading-relaxed mb-6">
+              <p className="text-kin-text-secondary leading-relaxed mb-4">
                 {city} homeowners served by {utility} can take advantage of net metering to earn credits for excess solar energy.
                 Your KIN consultant will optimize your system for {utility}&apos;s specific rate structure.
               </p>
+              {utilityRateInfo && (
+                <div className="bg-kin-light-gray rounded-xl border border-kin-beige p-4 mb-4">
+                  <p className="text-sm text-kin-text font-medium mb-1">📈 Rate Trend</p>
+                  <p className="text-sm text-kin-text-secondary leading-relaxed">{utilityRateInfo}</p>
+                </div>
+              )}
               <p className="text-sm text-kin-text-secondary">
                 <strong className="text-kin-text-secondary">Permitting:</strong> {permits}
               </p>
@@ -238,7 +240,7 @@ export default async function CityPage({ params }: Props) {
             Ready to go solar in {city}?
           </h2>
           <p className="text-white/50 text-lg mb-8 max-w-xl mx-auto">
-            Get a free, no-obligation estimate. See how much you could save with {utility} net metering and the 30% federal tax credit.
+            Get a free, no-obligation estimate. See how much you could save with {utility} net metering and $0-down financing.
           </p>
           <Link href="/get-an-instant-estimate"
             className="inline-flex items-center gap-2 bg-kin-sage hover:bg-kin-sage-light text-white font-semibold text-lg px-10 py-4 rounded-full transition-all hover:shadow-lg hover:shadow-kin-sage/30">
