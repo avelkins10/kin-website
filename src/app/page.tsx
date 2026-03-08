@@ -15,9 +15,9 @@ const stats = [
 ]
 
 const services = [
-  { icon: Sun, title: 'Solar', desc: 'Custom-designed systems that cut your electric bill from day one. We handle design, permits, install, and monitoring.', href: '/solar', img: '/img/6261e9983f4f1e24f8efb86c_shutterstock_1561073777-2-copy-2.jpg' },
-  { icon: Home, title: 'Roofing', desc: 'Full roof replacements — standalone or bundled with solar. In-house crews, one warranty either way.', href: '/roofing', img: '/img/67c23e69611073b0de2ebd2b_A7402606.jpg' },
-  { icon: Wind, title: 'HVAC', desc: 'New AC or heating — standalone installs and the Comfort Plan. Add solar to make your energy free.', href: '/hvac', img: '/img/646ba412d82177fca24f9e7f_DSC03962.jpg' },
+  { icon: Sun, title: 'Solar', subtitle: 'Own Your Energy Bill', desc: 'KIN designs and installs solar systems built for your home — not a template. In-house crews. Workmanship warranty. 4,000+ installs across 10 states.', cta: 'Get a Free Solar Quote', href: '/solar', img: '/img/6261e9983f4f1e24f8efb86c_shutterstock_1561073777-2-copy-2.jpg' },
+  { icon: Home, title: 'Roofing', subtitle: 'Full Replacements. Done Right.', desc: 'New roof, no solar required. KIN handles full residential replacements with in-house crews, honest assessments, and no subcontractors. Want to add solar at the same time? We can do that too.', cta: 'Get a Free Roof Assessment', href: '/roofing', img: '/img/67c23e69611073b0de2ebd2b_A7402606.jpg' },
+  { icon: Wind, title: 'HVAC', subtitle: 'Comfort That Costs Less to Run', desc: 'New AC, new heating, or the full Comfort Plan — KIN installs HVAC systems sized right for your home. No solar required. Add it if you want to eliminate the electric bill your new system runs on.', cta: 'Get a Free HVAC Quote', href: '/hvac', img: '/img/646ba412d82177fca24f9e7f_DSC03962.jpg' },
 ]
 
 const heroTestimonial = getHeroTestimonial()
@@ -145,16 +145,17 @@ export default function HomePage() {
               <Link key={s.title} href={s.href}
                 className="group rounded-2xl border border-kin-beige bg-white overflow-hidden hover:shadow-xl hover:shadow-black/5 transition-all duration-300">
                 <div className="aspect-[4/3] overflow-hidden">
-                  <img src={s.img} alt={s.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={s.img} alt={`KIN Home ${s.title.toLowerCase()} installation service`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-center gap-2 mb-1">
                     <s.icon size={18} className="text-kin-sage" />
                     <h3 className="text-lg font-semibold text-kin-text">{s.title}</h3>
                   </div>
+                  <p className="text-xs font-medium text-kin-sage mb-2">{s.subtitle}</p>
                   <p className="text-sm text-kin-text-secondary leading-relaxed mb-3">{s.desc}</p>
                   <span className="text-kin-sage text-sm font-medium inline-flex items-center gap-1 group-hover:gap-2 transition-all">
-                    Learn more <ArrowRight size={14} />
+                    {s.cta} <ArrowRight size={14} />
                   </span>
                 </div>
               </Link>
