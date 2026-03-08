@@ -38,10 +38,10 @@ export default function RoofingPage() {
               <Home size={14} /> Roofing Services
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-kin-text leading-tight mb-6">
-              A strong roof and solar<br /><span className="text-kin-sage">go hand in hand.</span>
+              Your roof.<br /><span className="text-kin-sage">Done right.</span>
             </h1>
             <p className="text-lg text-kin-text-secondary mb-8 leading-relaxed max-w-lg">
-              Most homeowners don&apos;t realize this until it&apos;s too late: installing solar on a roof that needs replacement costs you twice. We fix that. KIN handles both — so you do it right once, and you&apos;re covered for decades.
+              Whether you need a new roof before going solar, or just need a roof — KIN does both. Standalone roofing or bundled with solar — one crew, one warranty either way. All in-house, all covered for decades.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/get-an-instant-estimate"
@@ -64,17 +64,17 @@ export default function RoofingPage() {
             <div>
               <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">Why KIN Roofing?</p>
               <h2 className="text-3xl md:text-4xl font-bold text-kin-text mb-6">
-                We&apos;re already going to be on your roof.
+                A roofing company that does it all.
               </h2>
               <div className="space-y-4 text-kin-text-secondary leading-relaxed">
                 <p>
-                  When you go solar with KIN, our crew is up there anyway. We inspect every square foot before installation. If we see a problem, we tell you.
+                  KIN does standalone roof replacements — you don&apos;t need solar to work with us. Need a roof? We&apos;ll handle it with the same quality and accountability we bring to every job.
                 </p>
                 <p>
-                  And because we&apos;re a vertically integrated company — roofing, solar, HVAC, all in-house — you&apos;re dealing with one team, one warranty, and one phone number if anything ever needs attention.
+                  Going solar too? Even better. When you bundle roof and solar, we inspect every square foot, design the roof to support your panels, and handle both projects as one — saving you time and money.
                 </p>
                 <p>
-                  No subcontractors. No finger-pointing between your roofer and your solar company. Just one crew that does both.
+                  Either way, you&apos;re dealing with one team, one warranty, and one phone number. No subcontractors. No finger-pointing.
                 </p>
               </div>
             </div>

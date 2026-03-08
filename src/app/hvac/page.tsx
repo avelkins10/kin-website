@@ -26,10 +26,10 @@ export default function HvacPage() {
               <Wind size={14} /> HVAC Services
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-kin-text leading-tight mb-6">
-              Lower bills start with<br /><span className="text-kin-sage">your whole home.</span>
+              Need a new AC?<br /><span className="text-kin-sage">We do that.</span>
             </h1>
             <p className="text-lg text-kin-text-secondary mb-8 leading-relaxed max-w-lg">
-              Solar handles your electricity. The Comfort Plan handles the rest. When your HVAC system runs on clean, solar-powered energy — with equipment that actually fits your home — you feel the difference on day one.
+              KIN installs high-efficiency HVAC systems — standalone or bundled with solar. Need a new AC? We do that. Want to pair it with solar and cut your bill to near zero? We do that too. The Comfort Plan is our premium bundle, but we&apos;re happy to handle HVAC on its own.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/get-an-instant-estimate"
@@ -52,20 +52,17 @@ export default function HvacPage() {
             <div>
               <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">The Comfort Plan</p>
               <h2 className="text-3xl md:text-4xl font-bold text-kin-text mb-6">
-                What the Comfort Plan actually does.
+                Standalone HVAC or the full Comfort Plan.
               </h2>
               <div className="space-y-4 text-kin-text-secondary leading-relaxed">
                 <p>
-                  Most homeowners think about solar and HVAC separately. We don&apos;t. Here&apos;s why:
+                  Need a new heating or cooling system? KIN installs high-efficiency HVAC equipment with in-house crews — no subcontractors, no runaround. You don&apos;t need solar to work with us.
                 </p>
                 <p>
-                  Your HVAC system is one of the biggest electricity draws in your home. If it&apos;s inefficient, it&apos;s canceling out the savings your solar panels are working to deliver.
-                </p>
-                <p>
-                  The Comfort Plan pairs the right HVAC equipment with your solar design — sized correctly, installed by the same company, and financed as one package.
+                  But if you want to go further, the Comfort Plan pairs your new HVAC with solar — so the biggest electricity draw in your home runs on free energy from your roof. Sized correctly, installed by the same company, and financed as one package.
                 </p>
                 <p className="font-medium text-kin-text">
-                  The result: lower bills, a more comfortable home, and one company responsible for all of it.
+                  Either way: lower bills, a more comfortable home, and one company responsible for all of it.
                 </p>
               </div>
             </div>
