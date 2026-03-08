@@ -5,36 +5,36 @@ import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Solar & Energy Blog | KIN Home',
-  description: 'Expert insights on solar panels, energy savings, roofing, and HVAC from the KIN Home team.',
+  title: 'The KIN Blog — Solar, Energy & Home Tips | KIN Home',
+  description: 'Straight talk about solar — what it costs, how it works, what the incentives actually look like after the tax credit expired, and honest answers to the things people are nervous to ask.',
 }
 
 const posts = [
   {
     slug: 'solar-fears-honest-answers',
     title: '9 Honest Answers to the Things People Are Actually Afraid of Before Going Solar',
-    excerpt: 'Worried about solar? We break down the 9 biggest fears homeowners have — and give you the straight truth on each one.',
+    excerpt: 'Roof damage, locked-in leases, company going out of business, bill savings that don\'t pan out — real answers to the real fears homeowners have about solar.',
     date: 'January 2026',
     img: '/img/69a2a55be98f8517b4880805_63d2bc6a866250e8376d091d_1.png',
   },
   {
     slug: 'how-solar-panels-work',
     title: 'How Solar Panels Work: A Homeowner\'s Guide',
-    excerpt: 'A simple, no-jargon explanation of how solar panels turn sunlight into savings on your electric bill.',
+    excerpt: 'How solar panels actually work, what\'s on your roof, what to expect during installation, and how the savings show up on your bill. No engineering degree required.',
     date: 'December 2025',
     img: '/img/6261e9983f4f1e24f8efb86c_shutterstock_1561073777-2-copy-2.jpg',
   },
   {
     slug: 'solar-incentives-2026',
     title: 'Solar Incentives in 2026: What\'s Actually Still Available After the Federal Tax Credit Ended',
-    excerpt: 'The federal solar tax credit has changed. Here\'s what incentives are still available and how to take advantage of them.',
+    excerpt: 'The federal 30% solar tax credit expired at the end of 2025. Here\'s what incentives are still available in Florida and California — and why solar still makes financial sense.',
     date: 'November 2025',
     img: '/img/6272d02a1332972113954824_24-p-800.jpeg',
   },
   {
     slug: 'solar-cost-florida-2026',
     title: 'How Much Does Solar Cost in Florida in 2026?',
-    excerpt: 'Breaking down the real cost of solar in Florida — system pricing, financing options, and how much you can expect to save.',
+    excerpt: 'What does solar actually cost in Florida in 2026? Real numbers on lease, PPA, and loan options — plus honest payback math after the federal tax credit expired.',
     date: 'October 2025',
     img: '/img/6272d045ce88bbb007158f59_26-p-800.jpeg',
   },
@@ -51,10 +51,10 @@ export default function BlogPage() {
           <div className="max-w-2xl">
             <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">Blog</p>
             <h1 className="text-4xl md:text-5xl font-bold text-kin-text mb-4">
-              Insights from the KIN team.
+              The KIN Blog.
             </h1>
-            <p className="text-lg text-kin-text-secondary">
-              Expert advice on solar, roofing, HVAC, and making the most of your home energy.
+            <p className="text-lg text-kin-text-secondary leading-relaxed">
+              Straight talk about solar — what it costs, how it works, what the incentives actually look like after the tax credit expired, and honest answers to the things people are nervous to ask.
             </p>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function BlogPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8">
-            {posts.map((post, i) => (
+            {posts.map(post => (
               <Link key={post.slug} href={`/post/${post.slug}`}
                 className="group rounded-2xl border border-kin-beige bg-white overflow-hidden hover:shadow-xl hover:shadow-black/5 transition-all duration-300">
                 <div className="aspect-[16/9] overflow-hidden bg-kin-beige">
@@ -83,6 +83,13 @@ export default function BlogPage() {
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* More coming */}
+          <div className="text-center mt-12 p-8 rounded-2xl bg-kin-light-gray border border-kin-beige">
+            <p className="text-kin-text-secondary">
+              More coming soon. We publish practical guides on solar costs, incentives, and how it all actually works — no fluff.
+            </p>
           </div>
         </div>
       </section>

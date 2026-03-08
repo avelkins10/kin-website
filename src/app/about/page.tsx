@@ -2,36 +2,48 @@ import type { Metadata } from 'next'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Link from 'next/link'
-import { ArrowRight, CheckCircle, Star, ChevronDown } from 'lucide-react'
+import { ArrowRight, CheckCircle, ChevronDown, Sun, Home, Wind } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'About KIN Home | Our Story, Team & FAQs',
-  description: 'KIN Home has powered 4,000+ homes across 10 states since 2020. Meet our leadership team and learn why we\'re different.',
+  description: 'KIN Home has powered 4,000+ homes across 10 states since 2020. In-house everything — solar, roofing, HVAC. Meet our team and learn what makes us different.',
 }
 
 const values = [
-  { title: 'In-House Everything', desc: 'Sales, design, installation, and service — all KIN employees. No subcontractors, no finger-pointing, no runaround.' },
-  { title: 'Local Teams', desc: 'Real people in your community. Your neighbors work here. We know your area, your utility, and your incentives.' },
-  { title: 'Homeowner-First', desc: 'We built this company because we believe solar should be simple, honest, and done right. Every decision starts with what\'s best for you.' },
-  { title: 'Long-Term Partnership', desc: 'We\'re not here to sell you something and disappear. We monitor your system, answer your calls, and stand behind every install for decades.' },
+  { title: 'We do what we say we\'ll do.', desc: 'Simple. If we commit to a timeline, a price, or a call-back — we deliver. Trust is built in the follow-through, not the sales pitch.' },
+  { title: 'We own our outcomes.', desc: 'If something goes wrong on a KIN job, it\'s a KIN problem to fix. We don\'t look for someone else to blame and we don\'t make you fight for it.' },
+  { title: 'We treat homes like they\'re ours.', desc: 'Every crew is trained to leave a job site cleaner than they found it, communicate proactively, and treat homeowners the way they\'d want to be treated.' },
+  { title: 'We play the long game.', desc: 'We\'re not trying to close a deal. We\'re trying to earn a customer for life — and a referral from every person we serve.' },
+]
+
+const inHousePoints = [
+  { title: 'One Number to Call', desc: 'Every part of your project — sales, installation, inspection, service — flows through KIN. You\'re never passed to a third party. One company, one point of contact.' },
+  { title: 'Quality We Can Stand Behind', desc: 'When you control every step of the process, you can set and maintain a quality standard. Subcontractors answer to whoever\'s paying them. Our crews answer to KIN.' },
+  { title: 'Communication That Doesn\'t Fall Through the Cracks', desc: 'Your project manager tracks your job from signed contract to final inspection. You always know where your project stands.' },
+]
+
+const services = [
+  { icon: Sun, title: 'Solar', desc: 'Panels, inverters, battery storage, monitoring. Every system designed for your home, your roof, and your utility.' },
+  { icon: Home, title: 'Roofing', desc: 'Full replacements, repairs, and solar-integrated installs. Bundled with solar or standalone.' },
+  { icon: Wind, title: 'HVAC', desc: 'The KIN Comfort Plan. Right-sized equipment. High-efficiency systems. Designed to work with your solar installation.' },
 ]
 
 const leadership = [
-  { name: 'Austin Elkins', title: 'CEO & Founder', desc: 'Founded KIN in 2020 with a vision to make solar simple and honest. Leads strategy, culture, and growth.' },
-  { name: 'James Tootill', title: 'Chief Operating Officer', desc: 'Oversees daily operations across all 10 states. Ensures every install meets KIN\'s quality standards.' },
-  { name: 'Blake Corbin', title: 'Chief Financial Officer', desc: 'Manages financial strategy, forecasting, and the systems that keep KIN scaling sustainably.' },
-  { name: 'Brady Gurr', title: 'Chief Commercial Officer', desc: 'Leads sales strategy and team development. Drives KIN\'s door-to-door and referral programs.', img: '/img/66822586eb89f63c8ef55f27_Brady-Gurr-headshot.jpg' },
+  { name: 'Austin Elkins', title: 'CEO & Founder' },
+  { name: 'James Tootill', title: 'Chief Operating Officer' },
+  { name: 'Blake Corbin', title: 'Chief Financial Officer' },
+  { name: 'Brady Gurr', title: 'Chief Commercial Officer', img: '/img/66822586eb89f63c8ef55f27_Brady-Gurr-headshot.jpg' },
 ]
 
 const faqs = [
-  { q: 'How much does solar cost?', a: 'The cost depends on your home\'s energy usage, roof size, and location. Most KIN homeowners pay $0 down and save money from day one with financing. Get a free estimate to see your exact pricing.' },
-  { q: 'How long does installation take?', a: 'Most solar installations are completed in one day. The full process — from consultation to activation — typically takes 4-8 weeks, depending on permits and utility approval in your area.' },
-  { q: 'Do you offer financing?', a: 'Yes! We offer multiple $0 down financing options. Most homeowners replace their electric bill with a lower solar payment — saving money from month one.' },
-  { q: 'What happens if I need a new roof?', a: 'We handle that too. KIN installs roofs and solar together, saving you time and money. One crew, one timeline, one payment. We\'ll assess your roof during your free consultation.' },
-  { q: 'What states do you serve?', a: 'KIN Home currently serves homeowners in Florida, California, Texas, Utah, Ohio, Iowa, Missouri, Arkansas, Kentucky, and Oklahoma — with more states coming soon.' },
-  { q: 'Do I own my solar panels?', a: 'With most of our financing options, yes — you own your panels. We also offer lease and PPA options in select markets. Your KIN consultant will walk you through the best option for your situation.' },
-  { q: 'What warranties do you offer?', a: 'Your solar panels come with a 25-year manufacturer warranty, and KIN provides a workmanship warranty on every installation. We stand behind our work for decades.' },
-  { q: 'How do I monitor my solar production?', a: 'We set you up with a monitoring app during installation. You can see real-time production, energy savings, and system health from your phone — 24/7.' },
+  { q: 'Is the federal solar tax credit still available?', a: 'The 30% federal tax credit for homeowners who purchase or finance solar (Section 25D) expired on December 31, 2025. If you\'re considering a lease or PPA, federal tax benefits under Section 48E are still available through December 31, 2027 — and our financing partners pass those savings to you in the form of lower monthly rates. We\'ll walk you through the options that make sense for your situation.' },
+  { q: 'How long does a solar installation take?', a: 'From signed contract to live system, most installations take 8–16 weeks. The biggest variable is your utility company\'s interconnection timeline — something largely outside anyone\'s control. Your KIN project manager will track every step and keep you updated throughout.' },
+  { q: 'Does solar work in cloudy climates?', a: 'Yes. Solar panels generate electricity from daylight, not direct sunlight. Cloudy days reduce output — they don\'t eliminate it. We design every system based on your actual location\'s irradiance data, so your production estimates reflect real-world conditions.' },
+  { q: 'What happens if I produce more energy than I use?', a: 'Excess energy goes back to the grid, and your utility credits you for it under net metering policies. The rules vary by state and utility — KIN will explain exactly how yours works before you sign anything.' },
+  { q: 'Do I need to replace my roof before going solar?', a: 'Not always. We inspect every roof before installation. If your roof has 10+ good years left, you\'re typically fine to proceed. If it needs work, we\'ll tell you — and we can handle both as a bundled project so you don\'t have to coordinate two separate companies.' },
+  { q: 'What\'s included in the warranty?', a: 'KIN\'s installations include manufacturer warranties on panels and equipment (typically 25 years on panels), plus our own workmanship warranty. Your project manager will walk through the specifics for your system.' },
+  { q: 'Can I add battery storage?', a: 'Yes. Battery storage is available with most KIN installations and can be added at the time of install or retrofitted later. In states like California and Colorado where grid reliability is a concern, we typically recommend designing for battery from the start.' },
+  { q: 'How does KIN compare to the national solar companies I keep seeing ads for?', a: 'The biggest difference is that we do everything in-house. Large national companies often subcontract installation in local markets, which creates accountability gaps. When you work with KIN, the same company that sold you the system is the one installing it and standing behind it.' },
 ]
 
 export default function AboutPage() {
@@ -49,10 +61,10 @@ export default function AboutPage() {
           <div className="max-w-2xl">
             <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-4">About KIN Home</p>
             <h1 className="text-4xl md:text-5xl font-bold text-kin-text leading-tight mb-6">
-              Built by homeowners,<br /><span className="text-kin-sage">for homeowners.</span>
+              We started with one belief:<br /><span className="text-kin-sage">homeowners deserve better.</span>
             </h1>
             <p className="text-lg text-kin-text-secondary leading-relaxed max-w-lg">
-              Since 2020, KIN Home has powered over 4,000 homes across 10 states — with in-house crews, honest pricing, and a team that treats your home like their own.
+              Better solar. Better roofing. Better HVAC. Better communication. KIN Home was built on the idea that when you do it all in-house, everything gets better — the quality, the accountability, and the experience.
             </p>
           </div>
         </div>
@@ -78,27 +90,30 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Story */}
+      {/* Company Story */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">Our Story</p>
               <h2 className="text-3xl md:text-4xl font-bold text-kin-text mb-6">
-                Solar should be simple.
+                How KIN got here.
               </h2>
               <div className="space-y-4 text-kin-text-secondary leading-relaxed">
                 <p>
-                  KIN Home was founded in 2020 with a straightforward belief: going solar shouldn&apos;t be complicated, expensive, or full of surprises.
+                  KIN Home was founded in 2020 with a straightforward premise: the home energy industry had too many handoffs, too many subcontractors, and not enough accountability.
                 </p>
                 <p>
-                  Too many solar companies subcontract everything — installation, sales, even customer service. The homeowner ends up stuck between a salesperson who promised one thing and an installer who delivers another.
+                  Most solar companies design your system, then hand off installation to a third party, then hand off service to someone else entirely. If something goes wrong, you spend weeks figuring out who&apos;s responsible.
                 </p>
                 <p>
-                  We built KIN differently. Every person you interact with — from your first consultation to the crew on your roof — is a KIN employee. We design, permit, install, and monitor your system. One company, one standard, one point of contact.
+                  We built KIN differently. Our sales team, our installation crews, our project managers, our roofing and HVAC teams — all in-house, all under the same roof. When we put our name on a job, we mean it.
                 </p>
                 <p>
-                  Today, we&apos;ve powered over 4,000 homes across 10 states. We&apos;ve expanded into roofing and HVAC because homeowners kept asking us to handle more. And we&apos;ve earned 882+ five-star reviews because we do what we say we&apos;ll do.
+                  Since 2020, we&apos;ve completed more than 4,000 installations across 10 states. We have over 880 Google reviews and a 4.4-star rating — earned one installation at a time.
+                </p>
+                <p className="font-medium text-kin-text">
+                  We&apos;re not the biggest solar company. We&apos;re building the one that homeowners actually trust.
                 </p>
               </div>
             </div>
@@ -109,14 +124,54 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* In-House Everything */}
       <section className="py-20 md:py-28 bg-kin-light-gray">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">Our Values</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-kin-text">What makes KIN different.</h2>
+            <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">What Sets Us Apart</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-kin-text">In-house everything. No exceptions.</h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
+            {inHousePoints.map(p => (
+              <div key={p.title} className="bg-white rounded-2xl border border-kin-beige p-8">
+                <CheckCircle size={20} className="text-kin-sage mb-4" />
+                <h3 className="text-lg font-semibold text-kin-text mb-2">{p.title}</h3>
+                <p className="text-sm text-kin-text-secondary leading-relaxed">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What We Install */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">What We Install</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-kin-text">One company. Your whole home.</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {services.map(s => (
+              <div key={s.title} className="text-center p-8 rounded-2xl bg-kin-light-gray border border-kin-beige">
+                <div className="w-14 h-14 rounded-2xl bg-kin-sage/10 flex items-center justify-center mx-auto mb-5">
+                  <s.icon size={24} className="text-kin-sage" />
+                </div>
+                <h3 className="text-lg font-semibold text-kin-text mb-2">{s.title}</h3>
+                <p className="text-sm text-kin-text-secondary leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-20 md:py-28 bg-kin-beige">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">Core Values</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-kin-text">How we operate.</h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {values.map(v => (
               <div key={v.title} className="flex gap-4 p-6 rounded-2xl bg-white border border-kin-beige">
                 <CheckCircle size={20} className="text-kin-sage mt-0.5 flex-shrink-0" />
@@ -137,7 +192,7 @@ export default function AboutPage() {
             <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">Leadership</p>
             <h2 className="text-3xl md:text-4xl font-bold text-kin-text">The team behind KIN.</h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {leadership.map(person => (
               <div key={person.name} className="text-center p-6 rounded-2xl bg-kin-light-gray border border-kin-beige">
                 {person.img ? (
@@ -148,8 +203,7 @@ export default function AboutPage() {
                   </div>
                 )}
                 <h3 className="font-semibold text-kin-text">{person.name}</h3>
-                <p className="text-sm text-kin-sage font-medium mb-2">{person.title}</p>
-                <p className="text-xs text-kin-text-secondary leading-relaxed">{person.desc}</p>
+                <p className="text-sm text-kin-sage font-medium">{person.title}</p>
               </div>
             ))}
           </div>
@@ -157,10 +211,10 @@ export default function AboutPage() {
       </section>
 
       {/* FAQs */}
-      <section className="py-20 md:py-28 bg-kin-beige">
+      <section className="py-20 md:py-28 bg-kin-light-gray">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">FAQs</p>
+            <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">Frequently Asked Questions</p>
             <h2 className="text-3xl md:text-4xl font-bold text-kin-text">Common questions.</h2>
           </div>
           <div className="space-y-3">
@@ -182,11 +236,13 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-20 md:py-28 bg-kin-charcoal">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to join 4,000+ KIN homeowners?</h2>
-          <p className="text-white/60 text-lg mb-8">Get a free, no-obligation estimate in minutes.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">See what 4,000+ homeowners already know.</h2>
+          <p className="text-white/60 text-lg mb-8 max-w-xl mx-auto">
+            We&apos;d rather show you than tell you. Start with a free consultation — no pressure, no obligation — and find out what solar, roofing, or HVAC could look like for your home.
+          </p>
           <Link href="/get-an-instant-estimate"
             className="inline-flex items-center gap-2 bg-kin-sage hover:bg-kin-sage-light text-white font-semibold text-lg px-10 py-4 rounded-full transition-all">
-            Get Your Free Estimate <ArrowRight size={18} />
+            Get a Free Consultation <ArrowRight size={18} />
           </Link>
         </div>
       </section>
