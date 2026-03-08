@@ -47,8 +47,8 @@ export default function HomePage() {
         {/* Hero background image */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/img/6261ddc4a5e3c506eb46f398__X5A0704-copy-2.jpg"
-            alt="Solar panels installed on a residential roof by KIN Home"
+            src="/img/6261e9983f4f1e24f8efb86c_shutterstock_1561073777-2-copy-2.jpg"
+            alt="Craftsman home with solar panels at golden hour"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-white/30 md:from-white/85 md:via-white/50 md:to-transparent" />
