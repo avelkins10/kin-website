@@ -5,20 +5,28 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle, Star, Shield, Home, Phone } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Roofing Installation & Solar-Ready Roofs | KIN Home',
-  description: 'KIN Home installs roofs and bundles them with solar — one crew, one warranty, one phone number. In-house crews across 10 states. Get a free roof assessment.',
+  title: 'Roofing Installation — Standalone or Solar-Bundled | KIN Home',
+  description: 'KIN Home does complete roof replacements — with or without solar. In-house crews, one warranty, honest assessments. Get a free roof assessment.',
 }
 
+const standalonePoints = [
+  'In-house crews (no subcontractors)',
+  'Clean job sites and clear communication throughout',
+  'Workmanship warranty backed by KIN directly',
+  'Honest assessments — if your roof has years left, we\'ll tell you',
+]
+
 const bundleBenefits = [
-  { title: 'Save on Labor', desc: 'Scheduling roofing and solar separately means two crews, two mobilizations, two sets of costs. Bundle them and the labor math changes significantly.' },
-  { title: 'Perfect Integration', desc: 'A roof installed specifically to support solar is designed differently than a standard replacement. Penetrations are sealed correctly from day one. No retrofitting. No warranty gray areas.' },
-  { title: 'One Warranty That Covers Everything', desc: 'When KIN installs your roof and your solar system, there\'s no ambiguity about who\'s responsible if something needs attention. We stand behind both.' },
+  { title: 'Save Significantly on Labor', desc: 'Two separate projects mean two crews, two mobilizations, two sets of staging costs. Do them together and you eliminate most of that overlap. The savings are real.' },
+  { title: 'Built Right From Day One', desc: 'A roof installed to support solar is done differently than a standard replacement — penetrations sealed correctly, structural considerations addressed upfront. No retrofitting. No warranty gray areas.' },
+  { title: 'One Warranty That Covers Everything', desc: 'When KIN installs both, there\'s no ambiguity about who\'s responsible if something needs attention years from now. We stand behind the roof and the system.' },
+  { title: 'One Point of Contact', desc: 'No coordinating between a roofer and a solar company. One project manager, one schedule, one phone number.' },
 ]
 
 const steps = [
-  { num: '1', title: 'Free Roof Assessment', desc: 'A KIN expert walks your roof and gives you an honest evaluation. If you don\'t need a replacement, we\'ll tell you that too.' },
-  { num: '2', title: 'Scope and Schedule', desc: 'We put together a clear scope of work with materials, timeline, and pricing — no surprises. We coordinate roofing and solar on a single project schedule.' },
-  { num: '3', title: 'Installation and Inspection', desc: 'Our crew completes both projects with the same quality standards we apply to every solar installation across our 4,000+ completed jobs.' },
+  { num: '1', title: 'Free Roof Assessment', desc: 'A KIN expert walks your roof and gives you an honest evaluation. We\'ll tell you what it needs, what it\'ll cost, and whether you\'re a candidate for solar if that\'s on your radar.' },
+  { num: '2', title: 'Scope and Schedule', desc: 'Clear scope of work, materials, timeline, and pricing upfront. No surprises. If you\'re bundling solar, we coordinate both on a single project schedule.' },
+  { num: '3', title: 'Installation and Inspection', desc: 'Our in-house crew handles the full install. Same quality standards we bring to every one of our 4,000+ completed projects across 10 states.' },
 ]
 
 export default function RoofingPage() {
@@ -38,10 +46,10 @@ export default function RoofingPage() {
               <Home size={14} /> Roofing Services
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-kin-text leading-tight mb-6">
-              Your roof.<br /><span className="text-kin-sage">Done right.</span>
+              A new roof, done right.<br /><span className="text-kin-sage">Solar ready if you want it.</span>
             </h1>
             <p className="text-lg text-kin-text-secondary mb-8 leading-relaxed max-w-lg">
-              Whether you need a new roof before going solar, or just need a roof — KIN does both. Standalone roofing or bundled with solar — one crew, one warranty either way. All in-house, all covered for decades.
+              KIN installs roofs. Full replacements, top-to-bottom. No solar required. And if you ever want to add panels down the road — or do both at once — we can handle that too. One company, one crew, one warranty either way.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/get-an-instant-estimate"
@@ -57,47 +65,57 @@ export default function RoofingPage() {
         </div>
       </section>
 
-      {/* Why KIN for Roofing */}
+      {/* Standalone Roofing */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">Why KIN Roofing?</p>
+              <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">KIN Roofing</p>
               <h2 className="text-3xl md:text-4xl font-bold text-kin-text mb-6">
-                A roofing company that does it all.
+                Full replacement. Not just a patch.
               </h2>
-              <div className="space-y-4 text-kin-text-secondary leading-relaxed">
+              <div className="space-y-4 text-kin-text-secondary leading-relaxed mb-8">
                 <p>
-                  KIN does standalone roof replacements — you don&apos;t need solar to work with us. Need a roof? We&apos;ll handle it with the same quality and accountability we bring to every job.
+                  KIN does complete roof replacements for homeowners who need a new roof — period. Whether you&apos;re dealing with storm damage, age, leaks, or a roof that&apos;s just done, we&apos;ll assess it honestly and give you a clear scope of work and price before anything starts.
                 </p>
-                <p>
-                  Going solar too? Even better. When you bundle roof and solar, we inspect every square foot, design the roof to support your panels, and handle both projects as one — saving you time and money.
+                <p className="font-medium text-kin-text">
+                  No solar pitch required. If all you need is a new roof, that&apos;s what we&apos;ll do.
                 </p>
-                <p>
-                  Either way, you&apos;re dealing with one team, one warranty, and one phone number. No subcontractors. No finger-pointing.
-                </p>
+              </div>
+              <div className="space-y-3">
+                {standalonePoints.map(point => (
+                  <div key={point} className="flex items-center gap-2.5">
+                    <CheckCircle size={16} className="text-kin-sage flex-shrink-0" />
+                    <span className="text-sm text-kin-text">{point}</span>
+                  </div>
+                ))}
               </div>
             </div>
             <div>
-              <img src="/img/67c60fdbf6258ac11834b43a_7-wavy-roof.png" alt="Solar panels on roof" className="rounded-2xl w-full shadow-lg" />
+              <img src="/img/67c60fdbf6258ac11834b43a_7-wavy-roof.png" alt="Roof installation" className="rounded-2xl w-full shadow-lg" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Bundle Benefits */}
+      {/* Bundle Upgrade */}
       <section className="py-20 md:py-28 bg-kin-light-gray">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">Bundle & Save</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-kin-text">Two projects. One crew. One trip up your roof.</h2>
+            <p className="text-sm font-semibold text-kin-sage uppercase tracking-widest mb-3">The Smart Upgrade</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-kin-text">Already replacing your roof? This is the smart time to go solar.</h2>
+            <p className="text-kin-text-secondary mt-4 max-w-2xl mx-auto">
+              You don&apos;t have to add solar. But if you&apos;ve ever considered it, replacing your roof is the best moment to do it.
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {bundleBenefits.map(b => (
-              <div key={b.title} className="bg-white rounded-2xl border border-kin-beige p-8 hover:shadow-lg hover:shadow-black/3 transition-all">
-                <CheckCircle size={20} className="text-kin-sage mb-4" />
-                <h3 className="text-lg font-semibold text-kin-text mb-2">{b.title}</h3>
-                <p className="text-sm text-kin-text-secondary leading-relaxed">{b.desc}</p>
+              <div key={b.title} className="flex gap-4 p-6 rounded-2xl bg-white border border-kin-beige">
+                <CheckCircle size={20} className="text-kin-sage mt-0.5 flex-shrink-0" />
+                <div>
+                  <h3 className="font-semibold text-kin-text mb-1">{b.title}</h3>
+                  <p className="text-sm text-kin-text-secondary leading-relaxed">{b.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -128,9 +146,9 @@ export default function RoofingPage() {
       {/* CTA */}
       <section className="py-20 md:py-28 bg-kin-charcoal">
         <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to protect your home from the top down?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Start with a free roof assessment.</h2>
           <p className="text-white/60 text-lg mb-8 max-w-xl mx-auto">
-            A free roof assessment costs you nothing. And knowing where you stand before you go solar? That&apos;s the kind of decision that pays for itself.
+            It costs nothing and takes about 20 minutes. You&apos;ll know exactly where your roof stands — and what it would take to fix it, with or without solar.
           </p>
           <Link href="/get-an-instant-estimate"
             className="inline-flex items-center gap-2 bg-kin-sage hover:bg-kin-sage-light text-white font-semibold text-lg px-10 py-4 rounded-full transition-all">

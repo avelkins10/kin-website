@@ -16,8 +16,8 @@ const stats = [
 
 const services = [
   { icon: Sun, title: 'Solar', desc: 'Custom-designed systems that cut your electric bill from day one. We handle design, permits, install, and monitoring.', href: '/solar', img: '/img/6261e9983f4f1e24f8efb86c_shutterstock_1561073777-2-copy-2.jpg' },
-  { icon: Home, title: 'Roofing', desc: 'New roof — with or without solar. In-house crews, one warranty. Bundle with solar to save even more.', href: '/roofing', img: '/img/67c23e69611073b0de2ebd2b_A7402606.jpg' },
-  { icon: Wind, title: 'HVAC', desc: 'HVAC installation and the Comfort Plan. Standalone or paired with solar to cut your bill to near zero.', href: '/hvac', img: '/img/646ba412d82177fca24f9e7f_DSC03962.jpg' },
+  { icon: Home, title: 'Roofing', desc: 'Full roof replacements — standalone or bundled with solar. In-house crews, one warranty either way.', href: '/roofing', img: '/img/67c23e69611073b0de2ebd2b_A7402606.jpg' },
+  { icon: Wind, title: 'HVAC', desc: 'New AC or heating — standalone installs and the Comfort Plan. Add solar to make your energy free.', href: '/hvac', img: '/img/646ba412d82177fca24f9e7f_DSC03962.jpg' },
 ]
 
 const heroTestimonial = getHeroTestimonial()
