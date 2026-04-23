@@ -8,7 +8,7 @@ import { getHomepageTestimonials, getHeroTestimonial } from '@/lib/testimonials'
 
 const stats = [
   { value: '4,000+', label: 'Homes Powered' },
-  { value: '882+', label: 'Google Reviews' },
+  { value: '909+', label: 'Google Reviews' },
   { value: '10', label: 'States Served' },
   { value: 'A+', label: 'BBB Rating' },
   { value: '6', label: 'Years in Business' },
@@ -32,7 +32,7 @@ const steps = [
 const whyKin = [
   { title: 'In-House Everything', desc: 'Sales, design, install, and service — all KIN employees. No subcontractors, no runaround.' },
   { title: 'Local Teams', desc: 'Real people in your community, not a distant call center. Your neighbors work here.' },
-  { title: 'Proven Track Record', desc: '4,000+ installs and 882 five-star reviews. Our work speaks for itself.' },
+  { title: 'Proven Track Record', desc: '4,000+ installs and 909 five-star reviews. Our work speaks for itself.' },
   { title: 'Whole Home Energy', desc: 'Solar, roofing, and HVAC under one roof. We power, protect, and cool your home.' },
 ]
 
@@ -58,7 +58,7 @@ export default function HomePage() {
           <div>
             <div className="inline-flex items-center gap-2 bg-kin-sage/10 text-kin-sage text-sm font-medium px-4 py-1.5 rounded-full mb-6">
               <Star size={14} className="text-kin-gold fill-kin-gold" />
-              882+ five-star reviews
+              909+ five-star reviews
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-kin-text leading-[1.08] tracking-tight mb-6">
@@ -228,7 +228,7 @@ export default function HomePage() {
           <div className="text-center mt-10">
             <a href="https://www.google.com/search?q=kin+home+solar+reviews" target="_blank" rel="noopener noreferrer"
               className="text-kin-sage text-sm font-medium hover:underline inline-flex items-center gap-1">
-              Read all 882+ reviews on Google <ArrowRight size={14} />
+              Read all 909+ reviews on Google <ArrowRight size={14} />
             </a>
           </div>
         </div>

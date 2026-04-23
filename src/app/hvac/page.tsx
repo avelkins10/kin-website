@@ -26,7 +26,7 @@ const hvacSchema = {
     email: 'support@kinhome.com',
     address: { '@type': 'PostalAddress', addressCountry: 'US' },
     areaServed: ['FL', 'CA', 'TX', 'IA', 'MO', 'CO', 'OH', 'KY', 'UT', 'AR'],
-    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.4', reviewCount: '883' },
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.4', reviewCount: '909' },
   },
   serviceType: 'HVAC Installation and Replacement',
   description: 'KIN Home installs new air conditioning and heating systems for homeowners across 10 states. Standalone or bundled with solar. In-house crews, right-sized systems.',
@@ -78,7 +78,7 @@ export default function HvacPage() {
               Get a Free HVAC Quote <ArrowRight size={16} />
             </Link>
             <div className="flex flex-wrap items-center gap-4 text-sm text-kin-text-secondary mt-6">
-              <span className="flex items-center gap-1"><Star size={14} className="text-kin-gold fill-kin-gold" /> 4.4★ · 882+ reviews</span>
+              <span className="flex items-center gap-1"><Star size={14} className="text-kin-gold fill-kin-gold" /> 4.4★ · 909+ reviews</span>
               <span className="flex items-center gap-1"><Shield size={14} className="text-kin-gray-blue" /> Licensed & Insured</span>
             </div>
           </div>

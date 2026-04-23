@@ -33,7 +33,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-2 text-sm">
               <span className="text-kin-gold">★</span>
-              <span className="text-white/70">4.4 · 882+ Google Reviews</span>
+              <span className="text-white/70">4.4 · 909+ Google Reviews</span>
             </div>
           </div>
           {Object.entries(cols).map(([title, links]) => (

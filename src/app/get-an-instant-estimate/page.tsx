@@ -57,7 +57,7 @@ export default function GetAnInstantEstimatePage() {
             <div className="flex flex-wrap items-center gap-4 text-sm text-kin-text-secondary">
               <span className="flex items-center gap-1.5">
                 <Star size={14} className="text-kin-gold fill-kin-gold" />
-                4.4★ · 882+ reviews
+                4.4★ · 909+ reviews
               </span>
               <span className="flex items-center gap-1.5">
                 <Shield size={14} className="text-kin-gray-blue" />
@@ -158,7 +158,7 @@ export default function GetAnInstantEstimatePage() {
           <div className="flex flex-wrap justify-center gap-8 md:gap-14">
             {[
               { value: '4,000+', label: 'Homes Powered' },
-              { value: '882+', label: 'Google Reviews' },
+              { value: '909+', label: 'Google Reviews' },
               { value: '10', label: 'States Served' },
               { value: 'A+', label: 'BBB Rating' },
             ].map(s => (

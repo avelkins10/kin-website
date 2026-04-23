@@ -17,7 +17,7 @@ export function organizationSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.4',
-      reviewCount: '882',
+      reviewCount: '909',
       bestRating: '5',
     },
     hasOfferCatalog: {
@@ -75,7 +75,7 @@ export function localBusinessSchema(city: string, state: string, stateCode: stri
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.4',
-      reviewCount: '882',
+      reviewCount: '909',
       bestRating: '5',
     },
     parentOrganization: {

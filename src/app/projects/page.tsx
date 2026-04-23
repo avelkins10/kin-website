@@ -73,7 +73,7 @@ export default function ProjectsPage() {
             {[
               { value: '4,000+', label: 'Installs Completed' },
               { value: '10', label: 'States' },
-              { value: '882+', label: 'Five-Star Reviews' },
+              { value: '909+', label: 'Five-Star Reviews' },
               { value: '1 Day', label: 'Typical Install' },
             ].map(s => (
               <div key={s.label} className="text-center">

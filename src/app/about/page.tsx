@@ -78,7 +78,7 @@ export default function AboutPage() {
               { value: '2020', label: 'Founded' },
               { value: '4,000+', label: 'Homes Powered' },
               { value: '10', label: 'States' },
-              { value: '882+', label: 'Google Reviews' },
+              { value: '909+', label: 'Google Reviews' },
               { value: 'A+', label: 'BBB Rating' },
             ].map(s => (
               <div key={s.label} className="text-center">
@@ -110,7 +110,7 @@ export default function AboutPage() {
                   We built KIN differently. Our sales team, our installation crews, our project managers, our roofing and HVAC teams — all in-house, all under the same roof. When we put our name on a job, we mean it.
                 </p>
                 <p>
-                  Since 2020, we&apos;ve completed more than 4,000 installations across 10 states. We have over 880 Google reviews and a 4.4-star rating — earned one installation at a time.
+                  Since 2020, we&apos;ve completed more than 4,000 installations across 10 states. We have over 900 Google reviews and a 4.4-star rating — earned one installation at a time.
                 </p>
                 <p className="font-medium text-kin-text">
                   We&apos;re not the biggest solar company. We&apos;re building the one that homeowners actually trust.

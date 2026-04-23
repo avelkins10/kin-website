@@ -84,7 +84,7 @@ export default async function CityPage({ params }: Props) {
             <div className="flex flex-wrap items-center gap-4 text-sm text-kin-text-secondary mb-8">
               <span className="flex items-center gap-1.5">
                 <Star size={14} className="text-kin-gold fill-kin-gold" />
-                4.4★ · 882+ reviews
+                4.4★ · 909+ reviews
               </span>
               <span className="flex items-center gap-1.5">
                 <Shield size={14} className="text-kin-gray-blue" />
@@ -249,7 +249,7 @@ export default async function CityPage({ params }: Props) {
           <div className="flex flex-wrap items-center justify-center gap-6 mt-6 text-sm text-white/40">
             <span>✓ No obligation</span>
             <span>✓ $0-down financing</span>
-            <span>✓ 882+ five-star reviews</span>
+            <span>✓ 909+ five-star reviews</span>
           </div>
         </div>
       </section>

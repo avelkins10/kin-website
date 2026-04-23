@@ -7,7 +7,7 @@ import { Star, ArrowRight, CheckCircle, Sun, Zap, Shield } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Solar Panel Installation for Homeowners | KIN Home',
-  description: 'KIN Home installs residential solar panels in FL, CA, and 8 states. In-house crews, $0 down options, and 882 reviews. Get your free solar estimate.',
+  description: 'KIN Home installs residential solar panels in FL, CA, and 8 states. In-house crews, $0 down options, and 909 reviews. Get your free solar estimate.',
 }
 
 const benefits = [
@@ -58,7 +58,7 @@ export default function SolarPage() {
               Custom-designed for your home. Installed by our in-house crews. Saving you money from day one. 4,000+ homes powered across 10 states.
             </p>
             <div className="flex flex-wrap items-center gap-4 text-sm text-kin-text-secondary">
-              <span className="flex items-center gap-1"><Star size={14} className="text-kin-gold fill-kin-gold" /> 4.4★ · 882+ reviews</span>
+              <span className="flex items-center gap-1"><Star size={14} className="text-kin-gold fill-kin-gold" /> 4.4★ · 909+ reviews</span>
               <span className="flex items-center gap-1"><Shield size={14} className="text-kin-gray-blue" /> BBB A+</span>
               <span className="flex items-center gap-1"><Zap size={14} className="text-kin-sage" /> $0 down</span>
             </div>
